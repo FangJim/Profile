@@ -199,7 +199,7 @@ img {
 
 /*========== home ==========*/
 .home .home_container {
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .home .home_content {
@@ -417,5 +417,139 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+/*========== Skills ==========*/
+.skills .skills_container {
+  row-gap: 0;
+}
+
+.skills .skills_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.skills .skills_icon,
+.skills .skills_arrow {
+  font-size: 2rem;
+  color: #4bb3c3;
+}
+
+.skills .skills_icon {
+  margin-right: 0.75rem;
+}
+
+.skills .skills_title {
+  font-size: 1.125rem;
+}
+
+.skills .skills_list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.skills .skills_arrow {
+  margin-left: auto;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.skills .skills_titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skills .skills_name {
+  font-size: 0.938rem;
+}
+
+.skills .skills_bar,
+.skills .skills_percentage {
+  height: 5px;
+  border-radius: .25rem;
+}
+
+.skills .skills_bar {
+  background-color: #c2eaf0;
+}
+
+.skills .skills_percentage {
+  display: block;
+  background-color: #4bb3c3;
+}
+
+.skills .skill_HTML, .skills .skill_CSS {
+  width: 90%;
+}
+
+.skills .skill_SASS, .skills .skill_Git {
+  width: 60%;
+}
+
+.skills .skill_NPM {
+  width: 65%;
+}
+
+.skills .skill_Javascript {
+  width: 80%;
+}
+
+.skills .skill_React {
+  width: 10%;
+}
+
+.skills .skill_Node {
+  width: 50%;
+}
+
+.skills .skill_Express {
+  width: 45%;
+}
+
+.skills .skill_MongoDB, .skills .skill_Postman {
+  width: 30%;
+}
+
+.skills .skill_MySQL {
+  width: 50%;
+}
+
+.skills .skills_close .skills_list {
+  height: 0;
+  overflow: hidden;
+}
+
+.skills .skills_open .skills_list {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-bottom: 2.5rem;
+}
+
+.skills .skills_open .skills_arrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+@-webkit-keyframes percentage {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes percentage {
+  from {
+    width: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

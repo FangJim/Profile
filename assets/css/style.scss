@@ -38,7 +38,7 @@
     z-index: map-get($map: $z-index, $key: 'fixed');
     background-color: $body-color;
 
-    &   .nav{
+    & .nav{
         max-width: 968px;
         height: $header-height;
         display: flex;
@@ -124,7 +124,7 @@
 /*========== home ==========*/
 .home{
     & .home_container{
-        gap: 3rem;
+        gap: 1rem;
     }
     
     & .home_content{
@@ -234,7 +234,6 @@
 }
 
 /*========== About ==========*/
-
 .about{
     & .about_img{
         width: 350px;
@@ -278,5 +277,106 @@
     & .about_buttons{
         display: flex;
         justify-content: center;
+    }
+}
+
+/*========== Skills ==========*/
+.skills{
+    & .skills_container{
+        row-gap: 0;
+    }
+    & .skills_header{
+        display: flex;
+        align-items: center;
+        margin-bottom: map-get($map: $mb, $key:'1-5');
+        cursor: pointer;
+    }
+    & .skills_icon,
+    & .skills_arrow{
+        font-size: 2rem;
+        color: map-get($map: $first, $key: 'color');
+    }
+    & .skills_icon{
+        margin-right: map-get($map: $mb, $key:'0-75');
+    }
+    & .skills_title{
+        font-size: map-get($map: $font-size, $key:'h3' );
+    }
+    & .skills_list{
+        row-gap: 1.5rem;
+        padding-left: 2.7rem;
+    }
+    & .skills_arrow{
+        margin-left: auto;
+        transition: .4s;
+    }
+    & .skills_titles{
+        display: flex;
+        justify-content:space-between;
+        margin-bottom: map-get($map: $mb, $key: '0.5');
+    }
+    & .skills_name{
+        font-size: map-get($map: $font-size, $key:'normal');
+        font-weight: map-get($map: $mb, $key:'medium' );
+    }
+    & .skills_bar,
+    & .skills_percentage{
+        height: 5px;
+        border-radius: .25rem;
+    }
+
+    & .skills_bar{
+        background-color: map-get($map: $first, $key: 'color-lighter');
+    }
+
+    & .skills_percentage{
+        display: block;
+        background-color:map-get($map: $first, $key: 'color');
+    }
+    & .skill_HTML,.skill_CSS{
+        width: 90%;
+    }
+    & .skill_SASS,.skill_Git{
+        width: 60%;
+    }
+    & .skill_NPM{
+        width: 65%;
+    }
+    & .skill_Javascript{
+        width: 80%;
+    }
+    & .skill_React{
+        width: 10%;
+    }   
+    & .skill_Node{
+        width: 50%;
+    }
+    & .skill_Express{
+        width: 45%;
+    }
+    & .skill_MongoDB ,.skill_Postman{
+        width: 30%;
+    }
+    & .skill_MySQL{
+        width: 50%;
+    }
+
+    .skills_close .skills_list{
+        height: 0;
+        overflow: hidden;
+    }
+    .skills_open .skills_list{
+        height: max-content;
+        margin-bottom: map-get($map: $mb, $key: '2-5');
+    }
+
+    .skills_open .skills_arrow{
+        transform: rotate(-180deg);
+    }
+
+    @keyframes percentage{
+        from{
+            width:0;
+        }
     }
 }
