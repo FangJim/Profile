@@ -27,6 +27,7 @@ body {
   font-size: 0.938rem;
   background-color: #eff9fb;
   color: #6a797c;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {

@@ -50,3 +50,44 @@ function toggleSkills(){
 skillsHeader.forEach((element)=>{
     element.addEventListener('click',toggleSkills);
 })
+
+
+//swipe
+let swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+});
+
+
+//mail
+const send = document.querySelector('#send')
+
+send.addEventListener('click',()=>{
+    const fromName = document.querySelector('#contact_name').value
+    const fromMail = document.querySelector('#contact_mail').value
+    const fromMessage = document.querySelector('#contact_message').value
+    console.log(fromMessage)
+})
+// Email.send({
+//     Host : "smtp.yourisp.com",
+//     Username : "username",
+//     Password : "password",
+//     To : 'them@website.com',
+//     From : "you@isp.com",
+//     Subject : "This is the subject",
+//     Body : "And this is the body"
+// }).then(
+//   message => alert(message)
+// );

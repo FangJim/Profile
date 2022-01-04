@@ -8,6 +8,7 @@
 
 .section_title{
     font-size: map-get($map: $font-size, $key:'h1');
+    margin-bottom: map-get($map:$mb, $key:'1-5');
 }
 .section_subtitle{
     display: block;
@@ -119,17 +120,15 @@
     }
 }
 
-
-
 /*========== home ==========*/
 .home{
     & .home_container{
-        gap: 1rem;
+        gap: 3rem;
     }
     
     & .home_content{
         grid-template-columns: .5fr 3fr;
-        padding-top: 3.5rem;
+        padding-top: 1.5rem;
         align-items: center;
     }
     
@@ -143,14 +142,16 @@
             color: map-get($map: $first, $key:'color');
         }
         & .home_social-icon:hover{
+            transform: rotateY(180deg);
             color: map-get($map: $first, $key:'color-alt');
+            transition: 1s;
         }
     }
     & .home_blob{
-        width: 300px;
+        max-width: 300px;
     }
     & .home_blob-img{
-        width: 400px;
+        max-width: 400px;
         -webkit-filter: brightness(110%);
         filter: brightness(110%);
     }
@@ -159,7 +160,25 @@
         grid-column:1/3;
     
         & .home_title{
-            font-size: map-get($map:$font-size , $key:'big' );
+            width:fit-content;
+            position: relative;
+            font-size: map-get($map:$font-size , $key:'big');
+        }
+        & .home_title::after,
+        & .home_title::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            right:0;
+            top: 0;
+            bottom: 0;
+        }
+        & .home_title::before{
+            border-left: 2px solid black;
+            background-color: rgba(239, 249, 251,1);
+            animation: 
+             typing 6s steps(20) forwards infinite,
+             blink 900ms steps(20) infinite 
         }
         & .home_subtitle{
             font-size: map-get($map:$font-size , $key:'h3' );
@@ -194,6 +213,28 @@
             font-size: 1.25rem;
         }
     }
+    @keyframes typing{
+        25% {
+            border-left: 2px solid black;
+            left: 100%;
+        }
+        65% {
+            border-left: 2px solid black;
+            left: 100%;
+        }
+        80% {
+            border-left: 2px solid black;
+            left: 0%;
+        }
+        100%{
+            left: 0%;
+        }
+    }
+    @keyframes blink{
+        to{
+            border-left: transparent;
+        }
+    }
     @keyframes scrollAnime{
         0% {
             transform: translateY(-10px);
@@ -210,13 +251,12 @@
     }
 }
 
-
 /*========== Btn ==========*/
 .button{
     display: inline-block;
     background-color: map-get($map: $first, $key:'color');
     color: #fff;
-    padding: 1rem;
+    padding: 0.9rem;
     border-radius: .5rem;
     font-weight: map-get($map: $font-weight, $key:'medium' );
     &:hover{
@@ -279,6 +319,42 @@
         justify-content: center;
     }
 }
+
+/*========== Education ==========*/
+.education{
+    & .section_title{
+        margin-bottom: map-get($map: $mb, $key: '0-5');
+    }
+    & .education_data{
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        column-gap: 1.5rem;
+    }
+    & .education_title{
+        font-size: map-get($map: $font-size, $key: 'normal');
+        font-weight: map-get($map: $font-weight, $key: 'medium');
+    }
+    & .education_subtitle{
+        display: inline-block;
+        font-size: map-get($map: $font-size, $key: 'small');
+        margin-bottom: map-get($map: $mb, $key: '0-5');
+    }
+    & .education_rounder{
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background-color: map-get($map: $first, $key: 'color');
+        border-radius: 50%;
+    }
+    & .education_line{
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: map-get($map: $first, $key: 'color');
+        transform: translate(5.5px,-10px);
+    }
+}
+
 
 /*========== Skills ==========*/
 .skills{
@@ -378,5 +454,85 @@
         from{
             width:0;
         }
+    }
+}
+
+/*========== Portfolio ==========*/
+.portfolio{
+    & .portfolio_container{
+        overflow: initial;
+    }
+    & .portfolio_content{
+        padding: 0 1.5rem;
+    }
+    & .portfolio_img{
+        width: 265px;
+        // height: 125px;
+        border-radius: .5rem;
+        justify-self: center;
+    }
+    & .portfolio_title{
+        font-size: map-get($map: $font-size, $key: 'h3');
+        margin-bottom: map-get($map: $mb, $key: '0-5');
+    }
+    & .portfolio_description{
+        margin-bottom: map-get($map: $mb, $key: '0-75');
+    }
+    & .portfolio_button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+    }
+    & .portfolio_button:hover .button_icon{
+        display: inline-block;
+        transform: translateX(.25rem);
+    }
+    & .swiper-pagination-bullets{
+        bottom: -2.5rem;
+    }
+    & .swiper-pagination-bullet-active{
+        background-color: map-get($map: $first, $key: 'color');
+    }
+}
+
+/*========== Contact ==========*/
+.contact{
+    & .contact_container{
+        row-gap: 1.5rem;
+    }
+    & .contact_information{
+        display: flex;
+        margin-bottom: map-get($map: $mb, $key: '2');
+    }
+    & .contact_icon{
+        font-size: 2rem;
+        color: map-get($map: $first, $key: 'color');
+        margin-right: map-get($map: $mb, $key: '0-75');
+    }
+    & .contact_title{
+        font-size: map-get($map: $font-size, $key: 'h3');
+        font-weight: map-get($map: $font-weight, $key: 'medium');
+    }
+    & .contact_subtitle{
+        font-size: map-get($map: $font-size, $key: 'small');
+    }
+    & .contact_content{
+        background-color: $input-color;
+        border-radius: .5rem;
+        padding: .75rem 1rem .25rem;
+    }
+    & .contact_label{
+        font-size: map-get($map: $font-size, $key: 'small');
+    }
+    & .contact_input{
+        width: 100%;
+        background-color: $input-color;
+        color: map-get($map: $text, $key:'color' );
+        font-family: $body-font;
+        font-size: map-get($map: $font-size, $key: 'normal');
+        border: none;
+        outline: none;
+        padding: .25rem .5rem .5rem 0;
     }
 }

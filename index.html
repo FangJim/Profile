@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
@@ -39,8 +40,8 @@
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#project" class="nav_link">
-                            <i class="uil uil-books nav_icon"></i>Projects
+                        <a href="#portfolio" class="nav_link">
+                            <i class="uil uil-books nav_icon"></i>portfolio
                         </a>
                     </li>
                     <li class="nav_item">
@@ -69,7 +70,7 @@
                     <a href="https://github.com/FangJim" target="_blank" class="home_social-icon">
                         <i class="uil uil-github"></i>
                     </a>
-                    <a href="mailto:jmjmjim1101@gmail.com" target="_blank" class="home_social-icon">
+                    <a href="#contact" class="home_social-icon">
                         <i class="uil uil-envelope-alt"></i>                  
                       </a>
                     <a href="https://www.facebook.com/profile.php?id=100002610977006" target="_blank" class="home_social-icon">
@@ -82,7 +83,7 @@
                         <defs>
                           <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
                             <stop offset="0%" style="stop-color: hsl(188, 39%, 49%);"></stop>
-                            <stop offset="100%" style="stop-color: rgb(196, 224, 229);"></stop>
+                            <stop offset="100%" style="stop-color: hsl(191, 40%, 83%);"></stop>
                           </linearGradient>
                         </defs>
                         <mask mask-type='alpha' id="mask0">
@@ -133,8 +134,8 @@
                 </div>
 
                 <div class="home_data">
-                    <h1 class="home_title">Hello world, I'm Jim</h1>
-                    <h3 class="home_subtitle">University Student</h3>
+                    <h1 class="home_title">Hello world, I'm Jim.</h1>
+                    <h3 class="home_subtitle">YZU University Student</h3>
                     <p class="home_description">
                         Trying to be a front-end engineer
                     </p>
@@ -170,7 +171,7 @@
                     
                     <div>
                         <span class="about__info-title">05+</span>
-                        <span class="about__info-name">Projects <br>completed </span>
+                        <span class="about__info-name">portfolio <br>completed </span>
                     </div>
                 </div>
                 <div class="about_buttons">
@@ -183,7 +184,52 @@
     </section>
 
     <!-- ========== Education ========== -->
+    <section class="education section" id="education">
+        <h2 class="section_title">Education</h2>
 
+        <div class="education_container container">
+            
+            <div class="education_sections">
+                <!-- ========== content 1 ========== -->
+                <div class="education_content">
+                    <div class="education_data">
+                        <div>
+                            <h3 class="education_title">Huwei Senior High School</h3>
+                            <span class="education_subtitle">normal class</span>
+                            <div class="education_calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2017-2019
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="education_rounder"></span>
+                            <span class="education_line"></span>
+                        </div>
+                    </div>
+
+                  <!-- ========== content 2 ========== -->
+                    <div class="education_data">
+                        <div></div>
+
+                        <div>
+                            <span class="education_rounder"></span>
+                            <span class="education_line"></span>
+                        </div>
+
+                        <div>
+                            <h3 class="education_title">YZU university</h3>
+                            <span class="education_subtitle">Information and Communication</span>
+                            <div class="education_calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2019-
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ========== Skill ========== -->
     <section class="skills section" id="skills">
@@ -192,7 +238,7 @@
         <div class="skills_container container grid">
             <div>
                 <!-- ========== Skill 1 ========== -->
-                <div class="skills_content skills_close">
+                <div class="skills_content skills_open">
                     <div class="skills_header">
                         <i class="uil uil-brackets-curly skills_icon"></i>
                         
@@ -339,11 +385,152 @@
 
     </section>
 
-    <!-- ========== Projects ========== -->
-    
+    <!-- ========== portfolio ========== -->
+    <section class="portfolio section" id="portfolio">
+        <h2 class="section_title">Portfolio</h2>
+        
+        <div class="portfolio_container container swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- ========== Project ========== -->
+                <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/image/DSV.JPG" alt="" class="portfolio_img">
+                    <div class="portfolio_data">
+                        <h3 class="portfolio title">D.S.V</h3>
+                        <p class="portfolio_description">spoerjposfjpojwspfjspefjpsoejfpoesjf;
+                            pojz;lfj;ssxoejfrp;osjepfojs;ofjp;sojf;lzxjf;</p>
+                        <a href="https://github.com/FangJim/D.S.V" class="button button--flex button--small portfolio_button">
+                            Goto
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- ========== Project ========== -->
+                <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/image/codeclub.jpg" alt="" class="portfolio_img">
+                    <div class="portfolio_data">
+                        <h3 class="portfolio title">Code Club</h3>
+                        <p class="portfolio_description">spoerjposfjpojwspfjspefjpsoejfpoesjf;
+                            pojz;lfj;ssxoejfrp;osjepfojs;ofjp;sojf;lzxjf;</p>
+                        <a href="https://github.com/FangJim/code-club" class="button button--flex button--small portfolio_button">
+                            Goto
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                 <!-- ========== Project ========== -->
+                 <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/image/covidToday.JPG" alt="" class="portfolio_img">
+                    <div class="portfolio_data">
+                        <h3 class="portfolio title">Covid Today</h3>
+                        <p class="portfolio_description">spoerjposfjpojwspfjspefjpsoejfpoesjf;
+                            pojz;lfj;ssxoejfrp;osjepfojs;ofjp;sojf;lzxjf;</p>
+                        <a href="https://fangjim.github.io/covid-today/" class="button button--flex button--small portfolio_button">
+                            Goto
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                 <!-- ========== Project ========== -->
+                 <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/image/weather.JPG" alt="" class="portfolio_img">
+                    <div class="portfolio_data">
+                        <h3 class="portfolio title">Taiwan weather</h3>
+                        <p class="portfolio_description">spoerjposfjpojwspfjspefjpsoejfpoesjf;
+                            pojz;lfj;ssxoejfrp;osjepfojs;ofjp;sojf;lzxjf;</p>
+                        <a href="https://fangjim.github.io/weather/" class="button button--flex button--small portfolio_button">
+                            Goto
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                 <!-- ========== Project ========== -->
+                 <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/image/movie.JPG" alt="" class="portfolio_img">
+                    <div class="portfolio_data">
+                        <h3 class="portfolio title">Movie Search</h3>
+                        <p class="portfolio_description">spoerjposfjpojwspfjspefjpsoejfpoesjf;
+                            pojz;lfj;ssxoejfrp;osjepfojs;ofjp;sojf;lzxjf;</p>
+                        <a href="https://fangjim.github.io/movie-search/" class="button button--flex button--small portfolio_button">
+                            Goto
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                 <!-- ========== Project ========== -->
+                 <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/image/blackbear.JPG" alt="" class="portfolio_img">
+                    <div class="portfolio_data">
+                        <h3 class="portfolio title">Formosa black bear</h3>
+                        <p class="portfolio_description">spoerjposfjpojwspfjspefjpsoejfpoesjf;
+                            pojz;lfj;ssxoejfrp;osjepfojs;ofjp;sojf;lzxjf;</p>
+                        <a href="https://fangjim.github.io/Formosa-Black-Bear/" class="button button--flex button--small portfolio_button">
+                            Goto
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
     <!-- ========== Contact ========== -->
-    
+    <section class="contact section" id="contact">
+        <h2 class="section_title">Contact Me</h2>
+
+        <div class="contact_container container grid">
+            <div>
+
+                <div class="contact_information">
+                    <i class="uil uil-phone contact_icon"></i>
+
+                    <div>
+                        <h3 class="contact_title">My Phone</h3>
+                        <span class="contact_subtitle">0966101120</span>
+                    </div>
+                </div>
+
+
+                <div class="contact_information">
+                    <i class="uil uil-envelope-alt contact_icon"></i>
+
+                    <div>
+                        <h3 class="contact_title">My Email</h3>
+                        <span class="contact_subtitle">jmjmjim1101@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="contact_form grid">
+                <div class="contact_inputs grid">
+
+                    <div class="contact_content">
+                        <label for="" class="contact_label">Your Name</label>
+                        <input type="text" class="contact_input" id="contact_name">
+                    </div>
+
+                    <div class="contact_content">
+                        <label for="" class="contact_label">Your Email</label>
+                        <input type="email" class="contact_input" id="contact_mail">
+                    </div>
+                </div>
+                
+                <div class="contact_content">
+                    <label for="" class="contact_label">Message</label>
+                    <textarea name="" id="" cols="0" rows="7" class="contact_input" id="contact_message"></textarea>
+                </div>
+
+                <div>
+                    <a href="#" class="button button--flex" id="send">
+                        Send Message
+                        <i class="uil uil-envelope-upload-alt button_icon"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
     <!-- ========== Script ========== -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
