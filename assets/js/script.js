@@ -53,41 +53,31 @@ skillsHeader.forEach((element)=>{
 
 
 //swipe
-let swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
+var swiper = new Swiper(".mySwiper", {
+    effect: "cube",
     grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
+    loop:true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    cubeEffect: {
+      shadow: true,
       slideShadows: true,
+      shadowOffset: 28,
+      shadowScale: 0.94,
     },
     pagination: {
       el: ".swiper-pagination",
     },
-});
+  });
 
 
-//mail
-const send = document.querySelector('#send')
-
-send.addEventListener('click',()=>{
-    const fromName = document.querySelector('#contact_name').value
-    const fromMail = document.querySelector('#contact_mail').value
-    const fromMessage = document.querySelector('#contact_message').value
-    console.log(fromMessage)
-})
-// Email.send({
-//     Host : "smtp.yourisp.com",
-//     Username : "username",
-//     Password : "password",
-//     To : 'them@website.com',
-//     From : "you@isp.com",
-//     Subject : "This is the subject",
-//     Body : "And this is the body"
-// }).then(
-//   message => alert(message)
-// );
+//CHANGE BACKGROUND HEADER 
+function scrollHeader(){
+    const header = document.getElementById('header')
+    if(this.scrollY >= 80) header.classList.add('scroll-header'); 
+    else 
+        header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
