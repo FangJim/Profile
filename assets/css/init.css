@@ -26,13 +26,13 @@ body {
   margin: 0 0 3rem 0;
   font-family: "Poppins", sans-serif;
   font-size: 0.938rem;
-  background-color: #eff9fb;
-  color: #6a797c;
+  background-color: #162527;
+  color: #bac3c4;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-  color: #232829;
+  color: #f1f3f3;
   font-weight: 600;
 }
 
