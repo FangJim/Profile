@@ -54,24 +54,18 @@ skillsHeader.forEach((element)=>{
 
 //swipe
 var swiper = new Swiper(".mySwiper", {
-    effect: "cube",
-    grabCursor: true,
+    cssMode: true,
     loop:true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-    cubeEffect: {
-      shadow: true,
-      slideShadows: true,
-      shadowOffset: 28,
-      shadowScale: 0.94,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
     },
+    mousewheel: true,
+    keyboard: true,
   });
-
 
 //CHANGE BACKGROUND HEADER 
 function scrollHeader(){

@@ -271,7 +271,7 @@ img {
 
 .backgroundEffect span:nth-child(3) {
   top: 0px;
-  right: 0px;
+  right: 1000px;
   left: initial;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
@@ -609,7 +609,7 @@ img {
 }
 
 .about .about_description {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2.5rem;
 }
 
@@ -765,57 +765,24 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 80px;
-  border: 1px solid white;
   border-radius: 5px;
+  margin: .25rem;
+  font-size: 0.938rem;
+}
+
+.skills .skills_name {
+  color: white;
 }
 
 .skills .skills_titles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.skills .skills_name {
-  font-size: 0.938rem;
-}
-
-.skills .skill_HTML, .skills .skill_CSS {
-  width: 90%;
-}
-
-.skills .skill_SASS, .skills .skill_Git {
-  width: 60%;
-}
-
-.skills .skill_NPM {
-  width: 65%;
-}
-
-.skills .skill_Javascript {
-  width: 80%;
-}
-
-.skills .skill_React {
-  width: 10%;
-}
-
-.skills .skill_Node {
-  width: 50%;
-}
-
-.skills .skill_Express {
-  width: 45%;
-}
-
-.skills .skill_MongoDB, .skills .skill_Postman {
-  width: 30%;
-}
-
-.skills .skill_MySQL {
-  width: 50%;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-bottom: 2px solid black;
 }
 
 .skills .skills_close .skills_list {
@@ -852,11 +819,13 @@ img {
 }
 
 .portfolio .portfolio_title {
+  text-align: center;
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
 
 .portfolio .portfolio_description {
+  text-align: center;
   margin-bottom: 0.75rem;
 }
 
@@ -877,6 +846,36 @@ img {
   display: inline-block;
   -webkit-transform: translateX(0.25rem);
           transform: translateX(0.25rem);
+}
+
+.portfolio .swiper-button-prev::after,
+.portfolio .swiper-button-next::after {
+  content: "";
+}
+
+.portfolio .swiper_portfolio_icon {
+  font-size: 2rem;
+  color: #4bb3c3;
+}
+
+.portfolio .swiper-button-prev {
+  left: -.5rem;
+}
+
+.portfolio .swiper-button-next {
+  right: -.5rem;
+}
+
+.portfolio .swiper-pagination-bullet {
+  background-color: white;
+}
+
+.portfolio .swiper-pagination-bullets {
+  bottom: -2.5rem;
+}
+
+.portfolio .swiper-pagination-bullet-active {
+  background-color: #4bb3c3;
 }
 
 /*========== Contact ==========*/
@@ -974,6 +973,9 @@ img {
   }
   .skills .skills_list {
     padding-left: 0.7rem;
+  }
+  .about .about_description {
+    text-align: center;
   }
   .education .education_data {
     -webkit-column-gap: .5rem;
@@ -1091,7 +1093,7 @@ img {
     width: 350px;
   }
   .about_description {
-    text-align: initial;
+    text-align: center;
   }
   .about_info {
     -webkit-box-pack: justify;

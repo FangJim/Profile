@@ -176,7 +176,7 @@ overflow-x: hidden;
     }
     & span:nth-child(3){
         top: 0px;
-        right: 0px;
+        right: 1000px;
         left: initial;
         animation-delay:0.4s ;
         animation-duration: 6s;
@@ -397,7 +397,7 @@ overflow-x: hidden;
     }
 
     & .about_description{
-        text-align: center;
+        text-align: left;
         margin-bottom: map-get($map:$mb , $key:'2-5' );
     }
 
@@ -509,47 +509,21 @@ overflow-x: hidden;
         align-items: center;
         justify-content: center;
         width: 80px;
-        border: 1px solid white;
         border-radius: 5px;
-    }
-    
-    & .skills_titles{
-        display: flex;
-        justify-content:space-between;
-        margin-bottom: map-get($map: $mb, $key: '0.5');
+        margin: .25rem;
+        font-size: map-get($map: $font-size, $key:'normal');
+        font-weight: map-get($map: $mb, $key:'medium');
     }
     & .skills_name{
-        font-size: map-get($map: $font-size, $key:'normal');
-        font-weight: map-get($map: $mb, $key:'medium' );
+        color: white;
     }
-    & .skill_HTML,.skill_CSS{
-        width: 90%;
+    & .skills_titles{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-bottom: map-get($map: $mb, $key: '0.5');
+        border-bottom: 2px solid black;
     }
-    & .skill_SASS,.skill_Git{
-        width: 60%;
-    }
-    & .skill_NPM{
-        width: 65%;
-    }
-    & .skill_Javascript{
-        width: 80%;
-    }
-    & .skill_React{
-        width: 10%;
-    }   
-    & .skill_Node{
-        width: 50%;
-    }
-    & .skill_Express{
-        width: 45%;
-    }
-    & .skill_MongoDB ,.skill_Postman{
-        width: 30%;
-    }
-    & .skill_MySQL{
-        width: 50%;
-    }
-
     .skills_close .skills_list{
         height: 0;
         overflow: hidden;
@@ -580,10 +554,12 @@ overflow-x: hidden;
         justify-self: center;
     }
     & .portfolio_title{
+        text-align: center;
         font-size: map-get($map: $font-size, $key: 'h3');
         margin-bottom: map-get($map: $mb, $key: '0-5');
     }
     & .portfolio_description{
+        text-align: center;
         margin-bottom: map-get($map: $mb, $key: '0-75');
     }
     & .portfolio_button{
@@ -596,27 +572,30 @@ overflow-x: hidden;
         display: inline-block;
         transform: translateX(.25rem);
     }
-    // & .swiper-button-prev::after,
-    // & .swiper-button-next::after{
-    //     content:""
-    // }
+    & .swiper-button-prev::after,
+    & .swiper-button-next::after{
+        content:""
+    }
 
-    // & .swiper_portfolio_icon{
-    //     font-size: 2rem;
-    //     color: map-get($map: $first, $key:'color');
-    // }
-    // & .swiper-button-prev {
-    //     left: -.5rem;
-    // }
-    // & .swiper-button-next{
-    //     right: -.5rem;
-    // }
-    // & .swiper-pagination-bullets{
-    //     bottom: -2.5rem;
-    // }
-    // & .swiper-pagination-bullet-active{
-    //     background-color: map-get($map: $first, $key: 'color');
-    // }
+    & .swiper_portfolio_icon{
+        font-size: 2rem;
+        color: map-get($map: $first, $key:'color');
+    }
+    & .swiper-button-prev {
+        left: -.5rem;
+    }
+    & .swiper-button-next{
+        right: -.5rem;
+    }
+    & .swiper-pagination-bullet{
+        background-color: white;
+    }
+    & .swiper-pagination-bullets{
+        bottom: -2.5rem;
+    }
+    & .swiper-pagination-bullet-active{
+        background-color: map-get($map: $first, $key: 'color');
+    }
 }
 
 /*========== Contact ==========*/
@@ -709,6 +688,9 @@ overflow-x: hidden;
     }
     .skills .skills_list {
         padding-left: 0.7rem;
+    }
+    .about .about_description{
+        text-align: center;
     }
     .education .education_data{
         column-gap: .5rem;
@@ -817,7 +799,7 @@ overflow-x: hidden;
         width: 350px;
     }
     .about_description{
-        text-align: initial;
+        text-align: center;
     }
     .about_info{
         justify-content: space-between;
