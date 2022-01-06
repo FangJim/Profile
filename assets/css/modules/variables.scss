@@ -8,30 +8,30 @@ $hue-color: 188;
 $header-height: 3rem;
 
 /*========== title ==========*/
-$title-color: hsl($hue-color, 8%, 15%);
+$title-color: hsl($hue-color, 8%, 95%);
 
 /*========== input ==========*/
-$input-color: hsl($hue-color, 63%, 87%);
+$input-color: hsl($hue-color, 29%, 16%);
 
 /*========== body ==========*/
-$body-color: hsl($hue-color, 60%, 96%);
+$body-color: hsl($hue-color, 28%, 12%);
 
 /*========== Scroll bar ==========*/
 $scroll-bar-color: hsl($hue-color, 12%, 90%);
 $scroll-thumb-color: hsl($hue-color, 12%, 80%);
 
 /*========== container ==========*/
-$container-color: #fff;
+$container-color: hsl($hue-color, 29%, 16%);
 
 /*========== init color ==========*/
 $first: (
     'color': hsl($hue-color, 50%, 53%),
-    'color-second': hsl($hue-color, 69%, 61%),
+    'color-second': hsl($hue-color, 30%, 8%),
     'color-alt': hsl($hue-color, 39%, 49%),
     'color-lighter': hsl($hue-color, 60%, 85%),
 );
 $text: (
-    'color': hsl($hue-color, 8%, 45%),
+    'color': hsl($hue-color, 8%, 75%),
     'color-lighter': hsl($hue-color, 8%, 65%),
 );
 
