@@ -1,3 +1,3 @@
 # Profile
 
-<strong>Git page</strong> : https://jimfang.netlify.app/
+<strong>Page</strong> : https://jimfang.netlify.app/
