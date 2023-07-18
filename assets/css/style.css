@@ -411,21 +411,11 @@ img {
   font-size: 2rem;
 }
 
-.home .home_data .home_title::after,
-.home .home_data .home_title::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
+
 
 .home .home_data .home_title::before {
   border-left: 2px solid white;
   background-color: #162527;
-  -webkit-animation: typing 6s steps(20) forwards infinite, blink 900ms steps(20) infinite;
-          animation: typing 6s steps(20) forwards infinite, blink 900ms steps(20) infinite;
 }
 
 .home .home_data .home_subtitle {
@@ -600,6 +590,11 @@ img {
       -ms-grid-row-align: center;
       align-self: center;
 }
+.about_data{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
 
 .about .section_title {
   margin-bottom: 1rem;
@@ -607,7 +602,6 @@ img {
 
 .about .about_description {
   text-align: left;
-  margin-bottom: 2.5rem;
 }
 
 .about .about_info {
@@ -617,7 +611,6 @@ img {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-bottom: 2.5rem;
 }
 
 .about .about__info-title,
@@ -735,7 +728,7 @@ img {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 1rem 0 1rem;
@@ -1032,6 +1025,11 @@ img {
   .education_data .odd .education_subtitle,
   .education_data .odd .education_calendar {
     text-align: right;
+  }
+  .odd{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
   }
 }
 
